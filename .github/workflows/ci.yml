@@ -9,4 +9,4 @@ jobs:
      runs-on: ubuntu-latest
      steps:
         - name: Display hello
-          uses: echo "Hello User"
+          run: echo "Hello User"
