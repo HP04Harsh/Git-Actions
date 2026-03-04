@@ -8,6 +8,7 @@ env:
   APP_NAME: MyApp
   Environment: Dev
   Owner: Harsh
+  message: ${{secrets.TEST_VAR}}  
 
 jobs:
    build:
@@ -16,6 +17,8 @@ jobs:
         - name: Display hello
           run: echo $APP_NAME
         - name: Environment
-          run: echo $Envronment
+          run: echo $Environment
         - name: Owner Name
           run: echo $Owner
+        - name: Display Secrets
+          run: echo $message
