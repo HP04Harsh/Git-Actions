@@ -4,9 +4,18 @@ on:
   push:
     branches: ["main"]
 
+env:
+  APP_NAME: MyApp
+  Environment: Dev
+  Owner: Harsh
+
 jobs:
    build:
      runs-on: ubuntu-latest
      steps:
         - name: Display hello
-          run: echo "Hello User"
+          run: echo $APP_NAME
+        - name: Environment
+          run: echo $Envronment
+        - name: Owner Name
+          run: echo $Owner
